@@ -52,6 +52,7 @@ TARGETS = \
 		intel-ice-firmware \
 		intel-ucode \
 		iscsi-tools \
+		kwasm \
 		nut-client \
 		nvidia-container-toolkit \
 		nvidia-fabricmanager \

@@ -1,0 +1,16 @@
+name: kwasm
+variant: scratch
+shell: /toolchain/bin/bash
+dependencies:
+ - stage: base
+ - image: ghcr.io/kwasm/kwasm-node-installer:pr-42
+   runtime: false
+   to: /runtimes/
+steps: []
+finalize:
+  - from: /pkg/manifest.yaml
+    to: /
+  - from: /runtimes/assets
+    to: /rootfs/usr/local/bin
+  - from: /pkg/kwasm.part
+    to: /rootfs/etc/cri/conf.d/kwasm.part
